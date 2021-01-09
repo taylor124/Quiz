@@ -1,3 +1,6 @@
+button {
+    float: left;
+}
 div span{
     text-align: right;
     border: solid 5px black;
