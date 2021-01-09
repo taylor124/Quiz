@@ -4,34 +4,11 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Coding Quiz!</title>
 </head>
 <body>
-    <button id="btn">Start Timer</button>
-    <script>    
-    function startTimer(duration, display) {
-        var timer = duration, minutes, seconds;
-        setInterval(function () {
-            minutes = parseInt(timer / 60, 10);
-            seconds = parseInt(timer % 60, 10);
+    <button><a href="quiz1.html">Start Quiz</a></button>
 
-            minutes = minutes <10 ? "0" + minutes : minutes;
-            seconds = seconds <10 ? "0" + seconds : seconds;
-
-            display.textContent = minutes + ":" + seconds;
-
-            if (--timer < 0){
-                timer = duration;
-            }
-        }, 1000);
-    }
-    
-    document.querySelector('#btn').addEventListener('click',function(){
-       var fiveMinutes = 60 * 5,
-            display = document.querySelector('#time');
-        startTimer(fiveMinutes, display); 
-    });
-    </script>
-    <div> <span id="time">05:00</span></div>
+ </script>
 </body>
 </html>
