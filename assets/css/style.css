@@ -1,17 +1,47 @@
-body{
+body {
     text-align: center;
-    margin: 0 auto 30px auto;
+    margin: 30px auto 45px auto;
     padding: 30px;
+    height: 300px;
 }
-button {
-    font-size: 100px;
+.start button {
 text-align: center;
 }
-div span{
-    text-align: right;
+
+body .timer div{
     border: solid 5px black;
     font-size: 48px;
-    margin: 0 auto 30px auto;
-    padding: 30px;
     background-color: darkorange;
+    display: block;
+}
+
+span {
+    border: solid 5px black;
+    font-size: 48px;
+    background-color: darkorange;
+    text-align: right;
+    padding: 30px;
+    margin: 30px auto 45px auto;
+} 
+
+.question1, .question2, .question3, .question4{
+    background-color: darkgray;
+    border: solid 5px black;
+    margin: 30px auto 45px auto;
+    padding: 30px;
+    font-size: 25px;
+    height: auto;
+    width: auto;
+    display: block;
+}
+
+
+header {
+    float: right;
+    text-align: right;
+}
+
+.btn {
+    text-align: center;
+    margin: 30px;
 }

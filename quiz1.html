@@ -1,38 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="./assets/css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding Quiz!</title>
 </head>
+
 <body>
-    
 
-<script>    
-    function startTimer(duration, display) {
-        var timer = duration, minutes, seconds;
-        setInterval(function () {
-            minutes = parseInt(timer / 60, 10);
-            seconds = parseInt(timer % 60, 10);
+    <div class="timer"> <span id="time">Start</span></div>
 
-            minutes = minutes <10 ? "0" + minutes : minutes;
-            seconds = seconds <10 ? "0" + seconds : seconds;
+    <br>
+    <div class="questions">
+        <div class="question1">
+            In Javascript, jQuery code has a "_____" in front of it to tell it apart from Java:
+            <div class="btn">
+                <button class="false">"!"</button>
+                <button class="false">"?"</button>
+                <button class="correct">"$"</button>
+                <button class="false">"#"</button>
+            </div>
+        </div>
 
-            display.textContent = minutes + ":" + seconds;
+        <br>
 
-            if (--timer < 0){
-                timer = duration;
-            }
-        }, 1000);
-    }
-    
-    window.onload = function(){
-       var fiveMinutes = 60 * 5,
-            display = document.querySelector('#time');
-        startTimer(fiveMinutes, display); 
-    };
-    </script>
-    <div> <span id="time">05:00</span></div>
+        <div class="question2">
+            Which of the following code doesn't belong in Javascript?
+            <div class="btn">
+                <button class="false">"addEventListener"</button>
+                <button class="false">"querySelector"</button>
+                <button class="correct">"div"</button>
+                <button class="false">"var"</button>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="question3">
+            How do you join the Hypertext Markup Language (HTML) to the Cascading Style Sheet (Css)?
+            <div class="btn">
+                <button class="correct">by using a "link" element</button>
+                <button class="false">by using an "anchor" element</button>
+                <button class="false">by using a "href" element inside an "anchor"</button>
+                <button class="false">by using a "class" element</button>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="question4">
+            How can you code javascript into HTML without using a ".js" file?
+            <div class="btn">
+                <button class="false">You can't</button>
+                <button class="false">by making a "link" element with href="./js"</button>
+                <button class="correct">by using a "script" element</button>
+                <button class="false">None of the above</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/java.js"></script>
 </body>
+
 </html>
