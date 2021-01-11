@@ -6,7 +6,12 @@
 //When the Player guesses the question incorrectly, reduce the time by 30 seconds and keep them on the same page.
 //When the Player guesses the question correctly, move on to the next question without penalty.
 //If the Player guesses it wrong 3 times, Game over.
-
+var question1 = document.querySelector('.question1');
+var question2 = document.querySelector('.question2');
+var question3 = document.querySelector('.question3');
+var question4 = document.querySelector('.question4');
+var markgood = document.querySelector('.markgood');
+var questionNumber = 1;
 var display = document.querySelector('#time');
 var fiveMinutes = 60 * 5;
 var timer = fiveMinutes;
@@ -24,7 +29,7 @@ var setIntervalfunction = setInterval(function () {
 
     display.textContent = minutes + ":" + seconds;
 
-    timer-- ;
+    timer--;
     console.log(timer)
     if (timer === -1) {
         clearInterval(setIntervalfunction);
@@ -42,22 +47,36 @@ function startTimer() {
 
     for (i = 0; i < 4; i++) {
         document.getElementsByClassName('correct')[i].addEventListener('click', function () {
-            window.alert("Correct!");
+            markgood.textContent = 'Correct!';
+            nextQuestion();
         })
     };
 
     for (i = 0; i < 12; i++) {
         document.getElementsByClassName('false')[i].addEventListener('click', function () {
-            window.alert("incorrect");
             timer -= 29;
+            markgood.textContent = 'Incorrect >:C';
+            nextQuestion();
         })
     };
 };
 
-
-
-
-
-
-
-
+function nextQuestion() {
+    if (questionNumber === 1) {
+        question1.style.display = 'none';
+        question2.style.display = 'block';
+    }
+    if (questionNumber === 2) {
+        question2.style.display = 'none';
+        question3.style.display = 'block';
+    }
+    if (questionNumber === 3) {
+        question3.style.display = 'none';
+        question4.style.display = 'block';
+    }
+    if (questionNumber === 4) {
+        window.location = 'score.html'
+        localStorage.setItem('score', timer)
+    }
+    questionNumber++;
+}

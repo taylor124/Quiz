@@ -1,3 +1,8 @@
+var initials = '';
+var highscore = document.querySelector('.highscore');
+
+highscore.textContent = localStorage.getItem('score')
+
 const form = document.querySelector('form')
 const ul = document.querySelector('ul')
 const button = document.querySelector('button')
@@ -10,9 +15,9 @@ localStorage.setItem('items', JSON.stringify(itemsArray))
 const data = JSON.parse(localStorage.getItem('items'))
 
 const liMaker = (text) => {
-  const li = document.createElement('li')
-  li.textContent = text
-  ul.appendChild(li)
+  const h2 = document.createElement('h2')
+  h2.textContent = text
+  ul.appendChild(h2)
 }
 
 form.addEventListener('submit', function (e) {
@@ -28,9 +33,3 @@ data.forEach((item) => {
   liMaker(item)
 })
 
-button.addEventListener('click', function () {
-  localStorage.clear()
-  while (ul.firstChild) {
-    ul.removeChild(ul.firstChild)
-  }
-})

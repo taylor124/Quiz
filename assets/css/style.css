@@ -45,3 +45,35 @@ header {
     text-align: center;
     margin: 30px;
 }
+
+.question2, .question3, .question4, .submit{
+display: none;
+}
+
+.playerinfo {
+    text-align: center;
+    border: solid 5px black;
+    margin: auto;
+    padding: 30px;
+    height: auto;
+}
+
+.playerinfo div{
+    text-align: center;
+    margin: auto;
+    padding: 30px;
+}
+
+.playerinfo h2{
+    font-size: 48px;
+    margin: auto;
+}
+
+
+.highscore {
+    color: black;
+    background-color: transparent;
+    border: none;
+    margin: auto;
+    padding: 30px;
+}
